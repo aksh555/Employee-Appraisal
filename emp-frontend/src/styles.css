@@ -1,0 +1,219 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+	font-family: "Titillium Web", sans-serif;
+}
+
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+.footer-distributed {
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: fixed;
+	bottom: 0;
+}
+
+.footer-distributed .footer-left p {
+	color: #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links {
+	font-size: 18px;
+	font-weight: bold;
+	color: #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed p.footer-links a {
+	display: inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer-distributed .footer-right {
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color: #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+	background: #eee;
+}
+th {
+	background: #333;
+	color: white;
+	font-weight: bold;
+}
+td,
+th {
+	padding: 6px;
+	border: 1px solid #ccc;
+	text-align: left;
+}
+
+.mx {
+	padding: 2rem;
+	position: fixed;   
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+ }
+ 
+
+@media (max-width: 1200px) {
+	body {
+		font-size: 90%;
+	}
+	h1 {
+		font-size: 4.3em;
+	}
+	p {
+		font-size: 1.3em;
+	}
+	header {
+		height: 80px;
+	}
+	header .logo {
+		margin-top: 12px;
+		width: 200px;
+	}
+	header nav {
+		margin-top: 11px;
+	}
+	header nav ul li {
+		margin-right: 12px;
+	}
+	header nav ul li a {
+		border-radius: 23px;
+		font-size: 1.3em;
+		padding: 10px 12px;
+	}
+	.modal {
+		min-width: 700px;
+		min-height: 400px;
+   }
+}
+
+@media (max-width: 768px) {
+	body {
+		font-size: 80%;
+		margin: 0;
+	}
+	h1 {
+		font-size: 4em;
+	}
+	header {
+		height: 70px;
+	}
+	header .logo {
+		margin-top: 20px;
+		width: 70px;
+	}
+	header nav {
+		margin-top: 8px;
+	}
+	header nav ul li {
+		margin-right: 5px;
+	}
+	header nav ul li a {
+		border-radius: 20px;
+		font-size: 1.1em;
+		padding: 8px;
+	}
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 40px;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: relative;
+		padding-right: 20px;
+		width: 45%; 
+		white-space: nowrap;
+	}
+
+	td:nth-of-type(1):before {
+		content: "Employee Name";
+	}
+	td:nth-of-type(2):before {
+		content: "Employee ID";
+	}
+	td:nth-of-type(3):before {
+		content: "Overall Score";
+	}
+	td:nth-of-type(4):before {
+		content: "Actions";
+	}
+}
+
+@media ( max-width :320px) {
+    .modal {
+         min-width: 200px;
+         min-height: 120px;
+    }
+}
+
+@media ( min-width :321px) {
+    .modal {
+         min-width: 300px;
+         min-height: 220px;
+    }
+}
+
+@media ( min-width :640px) {
+    .modal {
+         min-width: 480px;
+         min-height: 320px;
+    }
+}

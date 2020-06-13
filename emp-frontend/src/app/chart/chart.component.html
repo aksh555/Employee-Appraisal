@@ -1,0 +1,12 @@
+<h4 style="text-align: center; padding: 2rem;"> Performance Chart</h4>
+<div *ngIf="chart" style="height:75vh; width:60vw; padding: 2em; text-align:center;">
+  <canvas style="position: relative; margin: auto;" id="canvas" height="75" width="30">{{ chart }}</canvas>
+</div>
+<br><br>
+<div class="row justify-content-center">
+  <button (click)="generatePDF()" class="btn btn-primary">Download PDF Report</button>
+</div>
+<br>
+<br>
+<br>
+<br>

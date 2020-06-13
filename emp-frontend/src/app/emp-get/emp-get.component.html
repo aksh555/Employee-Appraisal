@@ -1,0 +1,27 @@
+<div class="container" style="padding: 2rem;">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>Employee Name</td>
+        <td>Employee ID</td>
+        <td>Overall Score</td>
+        <td colspan="3">Actions</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.employee_name }}</td>
+        <td>{{ employee.employee_id }}</td>
+        <td>{{ employee.ov }}</td>
+        <td><a [routerLink]="['edit', employee._id]" class="btn btn-primary">Edit</a>
+          &nbsp;&nbsp;
+        <a (click)="deleteEmployee(employee._id)" class="btn btn-danger"onclick=" return confirm('Are you sure you want to remove this appraisal?')">Delete</a>
+        &nbsp;&nbsp;
+        <a [routerLink]="['getChart', {'id': employee.employee_id}]" class="btn btn-primary">View Scores</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
