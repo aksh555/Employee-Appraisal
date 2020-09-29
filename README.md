@@ -5,7 +5,7 @@ MEAN stack web app
 
 - Management admin can Register/Login 
 - Perform CRUD operations on Employee appraisal
-- View dynamic charts using Chatjs library
+- View dynamic charts using Chartjs library
 - Generate employe appraisal report PDF through jspdf
 
 ## Setup
